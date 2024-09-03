@@ -1,0 +1,8 @@
+prefix=/home/aina_shilikbabe/catkin_ws/install
+
+Name: turtlebot_controller
+Description: Description of turtlebot_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp rospy std_msgs turtlesim
