@@ -1,0 +1,4 @@
+<launch>
+    <node name="step_response_node" pkg="control_snake" type="step_response" output="screen"/>
+</launch>
+

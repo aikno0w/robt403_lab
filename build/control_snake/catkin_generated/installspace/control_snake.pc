@@ -1,0 +1,8 @@
+prefix=/home/aina_shilikbabe/catkin_ws/install
+
+Name: control_snake
+Description: Description of control_snake
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
