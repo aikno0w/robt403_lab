@@ -1,0 +1,8 @@
+prefix=/home/aina_shilikbabe/catkin_ws/devel
+
+Name: traj_planning
+Description: Description of traj_planning
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs

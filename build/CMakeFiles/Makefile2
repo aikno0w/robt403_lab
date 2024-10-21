@@ -63,10 +63,12 @@ all: snake-noetic/robot_control/all
 all: snake-noetic/robot_description/all
 all: snake-noetic/moveit_arm/all
 all: dynamixel_motor/dynamixel_msgs/all
+all: animate/all
 all: beginner_tutorials/all
 all: control_snake/all
 all: my_package/all
 all: snake-noetic/my_dynamixel_tutorial/all
+all: traj_planning/all
 all: turtlebot_controller/all
 all: snake-noetic/move/all
 
@@ -83,10 +85,12 @@ preinstall: snake-noetic/robot_control/preinstall
 preinstall: snake-noetic/robot_description/preinstall
 preinstall: snake-noetic/moveit_arm/preinstall
 preinstall: dynamixel_motor/dynamixel_msgs/preinstall
+preinstall: animate/preinstall
 preinstall: beginner_tutorials/preinstall
 preinstall: control_snake/preinstall
 preinstall: my_package/preinstall
 preinstall: snake-noetic/my_dynamixel_tutorial/preinstall
+preinstall: traj_planning/preinstall
 preinstall: turtlebot_controller/preinstall
 preinstall: snake-noetic/move/preinstall
 
@@ -108,14 +112,34 @@ clean: snake-noetic/robot_control/clean
 clean: snake-noetic/robot_description/clean
 clean: snake-noetic/moveit_arm/clean
 clean: dynamixel_motor/dynamixel_msgs/clean
+clean: animate/clean
 clean: beginner_tutorials/clean
 clean: control_snake/clean
 clean: my_package/clean
 clean: snake-noetic/my_dynamixel_tutorial/clean
+clean: traj_planning/clean
 clean: turtlebot_controller/clean
 clean: snake-noetic/move/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory animate
+
+# Recursive "all" directory target.
+animate/all:
+
+.PHONY : animate/all
+
+# Recursive "preinstall" directory target.
+animate/preinstall:
+
+.PHONY : animate/preinstall
+
+# Recursive "clean" directory target.
+animate/clean:
+
+.PHONY : animate/clean
 
 #=============================================================================
 # Directory level rules for directory beginner_tutorials
@@ -569,6 +593,24 @@ snake-noetic/robot_description/preinstall:
 snake-noetic/robot_description/clean:
 
 .PHONY : snake-noetic/robot_description/clean
+
+#=============================================================================
+# Directory level rules for directory traj_planning
+
+# Recursive "all" directory target.
+traj_planning/all:
+
+.PHONY : traj_planning/all
+
+# Recursive "preinstall" directory target.
+traj_planning/preinstall:
+
+.PHONY : traj_planning/preinstall
+
+# Recursive "clean" directory target.
+traj_planning/clean:
+
+.PHONY : traj_planning/clean
 
 #=============================================================================
 # Directory level rules for directory turtlebot_controller

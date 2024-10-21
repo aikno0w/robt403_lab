@@ -436,6 +436,12 @@ actionlib_DIR:PATH=/opt/ros/noetic/share/actionlib/cmake
 actionlib_msgs_DIR:PATH=/opt/ros/noetic/share/actionlib_msgs/cmake
 
 //Value Computed by CMake
+animate_BINARY_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/build/animate
+
+//Value Computed by CMake
+animate_SOURCE_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/src/animate
+
+//Value Computed by CMake
 beginner_tutorials_BINARY_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/build/beginner_tutorials
 
 //Value Computed by CMake
@@ -832,6 +838,12 @@ tf2_ros_DIR:PATH=/opt/ros/noetic/share/tf2_ros/cmake
 //The directory containing a CMake configuration file for tf.
 tf_DIR:PATH=/opt/ros/noetic/share/tf/cmake
 
+//Value Computed by CMake
+traj_planning_BINARY_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/build/traj_planning
+
+//Value Computed by CMake
+traj_planning_SOURCE_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/src/traj_planning
+
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/noetic/share/trajectory_msgs/cmake
 
@@ -1006,7 +1018,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=19
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
