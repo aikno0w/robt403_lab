@@ -53,6 +53,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/traj_planning" TYPE PROGRAM FILES "/home/aina_shilikbabe/catkin_ws/build/traj_planning/catkin_generated/installspace/execution.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/traj_planning" TYPE PROGRAM FILES "/home/aina_shilikbabe/catkin_ws/build/traj_planning/catkin_generated/installspace/multiple_via.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/traj_planning" TYPE PROGRAM FILES "/home/aina_shilikbabe/catkin_ws/build/traj_planning/catkin_generated/installspace/single_pose.py")
 endif()
 

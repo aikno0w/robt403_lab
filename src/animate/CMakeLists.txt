@@ -27,7 +27,8 @@ include_directories(
 ## Mark executable Python scripts for installation
 ## In this case, we are installing 'test.py' from the 'src' folder
 catkin_install_python(PROGRAMS
-  src/animation.py
+  src/multiple_anim.py
+  src/single_anim.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

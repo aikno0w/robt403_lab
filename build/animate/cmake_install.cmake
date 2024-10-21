@@ -53,6 +53,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/animate" TYPE PROGRAM FILES "/home/aina_shilikbabe/catkin_ws/build/animate/catkin_generated/installspace/animation.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/animate" TYPE PROGRAM FILES "/home/aina_shilikbabe/catkin_ws/build/animate/catkin_generated/installspace/multiple_anim.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/animate" TYPE PROGRAM FILES "/home/aina_shilikbabe/catkin_ws/build/animate/catkin_generated/installspace/single_anim.py")
 endif()
 
