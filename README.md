@@ -1,8 +1,7 @@
 # robt403_lab
-Lab 3:   
-new package to run the trajectory planning:
+Lab 4:   
+new moveit package:
 
-~/catkin_ws/src/animate (to animate the path planning)
-~/catkin_ws/src/traj_planning (to execute on the real-robot/in simulation)
-
-./launch_packages.sh (to run the execution and animation at the same time)
+~/catkin_ws/src/lab4_moveit 
+test.cpp - to move along x axis
+rectangle.cpp - move like a rectangle
