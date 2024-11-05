@@ -56,6 +56,18 @@ CMAKE_BINARY_DIR = /home/aina_shilikbabe/catkin_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -78,41 +90,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -134,6 +111,29 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,64 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-turtlebot_controller/CMakeFiles/turtlesim_generate_messages_cpp.dir/rule:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/turtlesim_generate_messages_cpp.dir/rule
-.PHONY : turtlebot_controller/CMakeFiles/turtlesim_generate_messages_cpp.dir/rule
+turtlebot_controller/CMakeFiles/turtlesim_generate_messages_py.dir/rule:
+	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/turtlesim_generate_messages_py.dir/rule
+.PHONY : turtlebot_controller/CMakeFiles/turtlesim_generate_messages_py.dir/rule
 
 # Convenience name for target.
-turtlesim_generate_messages_cpp: turtlebot_controller/CMakeFiles/turtlesim_generate_messages_cpp.dir/rule
+turtlesim_generate_messages_py: turtlebot_controller/CMakeFiles/turtlesim_generate_messages_py.dir/rule
 
-.PHONY : turtlesim_generate_messages_cpp
+.PHONY : turtlesim_generate_messages_py
 
 # fast build rule for target.
-turtlesim_generate_messages_cpp/fast:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/turtlesim_generate_messages_cpp.dir/build.make turtlebot_controller/CMakeFiles/turtlesim_generate_messages_cpp.dir/build
-.PHONY : turtlesim_generate_messages_cpp/fast
-
-# Convenience name for target.
-turtlebot_controller/CMakeFiles/turtlesim_generate_messages_eus.dir/rule:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/turtlesim_generate_messages_eus.dir/rule
-.PHONY : turtlebot_controller/CMakeFiles/turtlesim_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-turtlesim_generate_messages_eus: turtlebot_controller/CMakeFiles/turtlesim_generate_messages_eus.dir/rule
-
-.PHONY : turtlesim_generate_messages_eus
-
-# fast build rule for target.
-turtlesim_generate_messages_eus/fast:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/turtlesim_generate_messages_eus.dir/build.make turtlebot_controller/CMakeFiles/turtlesim_generate_messages_eus.dir/build
-.PHONY : turtlesim_generate_messages_eus/fast
-
-# Convenience name for target.
-turtlebot_controller/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
-.PHONY : turtlebot_controller/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-turtlesim_generate_messages_lisp: turtlebot_controller/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
-
-.PHONY : turtlesim_generate_messages_lisp
-
-# fast build rule for target.
-turtlesim_generate_messages_lisp/fast:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/turtlesim_generate_messages_lisp.dir/build.make turtlebot_controller/CMakeFiles/turtlesim_generate_messages_lisp.dir/build
-.PHONY : turtlesim_generate_messages_lisp/fast
-
-# Convenience name for target.
-turtlebot_controller/CMakeFiles/turtle_listener.dir/rule:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/turtle_listener.dir/rule
-.PHONY : turtlebot_controller/CMakeFiles/turtle_listener.dir/rule
-
-# Convenience name for target.
-turtle_listener: turtlebot_controller/CMakeFiles/turtle_listener.dir/rule
-
-.PHONY : turtle_listener
-
-# fast build rule for target.
-turtle_listener/fast:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/turtle_listener.dir/build.make turtlebot_controller/CMakeFiles/turtle_listener.dir/build
-.PHONY : turtle_listener/fast
+turtlesim_generate_messages_py/fast:
+	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/turtlesim_generate_messages_py.dir/build.make turtlebot_controller/CMakeFiles/turtlesim_generate_messages_py.dir/build
+.PHONY : turtlesim_generate_messages_py/fast
 
 # Convenience name for target.
 turtlebot_controller/CMakeFiles/turtlesim_generate_messages_nodejs.dir/rule:
@@ -243,94 +198,64 @@ turtlesim_generate_messages_nodejs/fast:
 .PHONY : turtlesim_generate_messages_nodejs/fast
 
 # Convenience name for target.
-turtlebot_controller/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-.PHONY : turtlebot_controller/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+turtlebot_controller/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule:
+	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
+.PHONY : turtlebot_controller/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_py: turtlebot_controller/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+turtlesim_generate_messages_lisp: turtlebot_controller/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
 
-.PHONY : std_srvs_generate_messages_py
+.PHONY : turtlesim_generate_messages_lisp
 
 # fast build rule for target.
-std_srvs_generate_messages_py/fast:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/std_srvs_generate_messages_py.dir/build.make turtlebot_controller/CMakeFiles/std_srvs_generate_messages_py.dir/build
-.PHONY : std_srvs_generate_messages_py/fast
+turtlesim_generate_messages_lisp/fast:
+	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/turtlesim_generate_messages_lisp.dir/build.make turtlebot_controller/CMakeFiles/turtlesim_generate_messages_lisp.dir/build
+.PHONY : turtlesim_generate_messages_lisp/fast
 
 # Convenience name for target.
-turtlebot_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-.PHONY : turtlebot_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+turtlebot_controller/CMakeFiles/turtlesim_generate_messages_eus.dir/rule:
+	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/turtlesim_generate_messages_eus.dir/rule
+.PHONY : turtlebot_controller/CMakeFiles/turtlesim_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_cpp: turtlebot_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+turtlesim_generate_messages_eus: turtlebot_controller/CMakeFiles/turtlesim_generate_messages_eus.dir/rule
 
-.PHONY : std_srvs_generate_messages_cpp
+.PHONY : turtlesim_generate_messages_eus
 
 # fast build rule for target.
-std_srvs_generate_messages_cpp/fast:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make turtlebot_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
-.PHONY : std_srvs_generate_messages_cpp/fast
+turtlesim_generate_messages_eus/fast:
+	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/turtlesim_generate_messages_eus.dir/build.make turtlebot_controller/CMakeFiles/turtlesim_generate_messages_eus.dir/build
+.PHONY : turtlesim_generate_messages_eus/fast
 
 # Convenience name for target.
-turtlebot_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-.PHONY : turtlebot_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+turtlebot_controller/CMakeFiles/turtle_listener.dir/rule:
+	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/turtle_listener.dir/rule
+.PHONY : turtlebot_controller/CMakeFiles/turtle_listener.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_eus: turtlebot_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+turtle_listener: turtlebot_controller/CMakeFiles/turtle_listener.dir/rule
 
-.PHONY : std_srvs_generate_messages_eus
+.PHONY : turtle_listener
 
 # fast build rule for target.
-std_srvs_generate_messages_eus/fast:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make turtlebot_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/build
-.PHONY : std_srvs_generate_messages_eus/fast
+turtle_listener/fast:
+	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/turtle_listener.dir/build.make turtlebot_controller/CMakeFiles/turtle_listener.dir/build
+.PHONY : turtle_listener/fast
 
 # Convenience name for target.
-turtlebot_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-.PHONY : turtlebot_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+turtlebot_controller/CMakeFiles/turtlesim_generate_messages_cpp.dir/rule:
+	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/turtlesim_generate_messages_cpp.dir/rule
+.PHONY : turtlebot_controller/CMakeFiles/turtlesim_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_lisp: turtlebot_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+turtlesim_generate_messages_cpp: turtlebot_controller/CMakeFiles/turtlesim_generate_messages_cpp.dir/rule
 
-.PHONY : std_srvs_generate_messages_lisp
+.PHONY : turtlesim_generate_messages_cpp
 
 # fast build rule for target.
-std_srvs_generate_messages_lisp/fast:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make turtlebot_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
-.PHONY : std_srvs_generate_messages_lisp/fast
-
-# Convenience name for target.
-turtlebot_controller/CMakeFiles/turtlesim_generate_messages_py.dir/rule:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/turtlesim_generate_messages_py.dir/rule
-.PHONY : turtlebot_controller/CMakeFiles/turtlesim_generate_messages_py.dir/rule
-
-# Convenience name for target.
-turtlesim_generate_messages_py: turtlebot_controller/CMakeFiles/turtlesim_generate_messages_py.dir/rule
-
-.PHONY : turtlesim_generate_messages_py
-
-# fast build rule for target.
-turtlesim_generate_messages_py/fast:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/turtlesim_generate_messages_py.dir/build.make turtlebot_controller/CMakeFiles/turtlesim_generate_messages_py.dir/build
-.PHONY : turtlesim_generate_messages_py/fast
-
-# Convenience name for target.
-turtlebot_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-.PHONY : turtlebot_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_nodejs: turtlebot_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_srvs_generate_messages_nodejs
-
-# fast build rule for target.
-std_srvs_generate_messages_nodejs/fast:
-	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make turtlebot_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
-.PHONY : std_srvs_generate_messages_nodejs/fast
+turtlesim_generate_messages_cpp/fast:
+	cd /home/aina_shilikbabe/catkin_ws/build && $(MAKE) -f turtlebot_controller/CMakeFiles/turtlesim_generate_messages_cpp.dir/build.make turtlebot_controller/CMakeFiles/turtlesim_generate_messages_cpp.dir/build
+.PHONY : turtlesim_generate_messages_cpp/fast
 
 src/exercise5_triangle.o: src/exercise5_triangle.cpp.o
 
@@ -365,24 +290,19 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... install/local"
-	@echo "... turtlesim_generate_messages_cpp"
-	@echo "... turtlesim_generate_messages_eus"
-	@echo "... turtlesim_generate_messages_lisp"
-	@echo "... install/strip"
-	@echo "... turtle_listener"
-	@echo "... turtlesim_generate_messages_nodejs"
-	@echo "... std_srvs_generate_messages_py"
-	@echo "... std_srvs_generate_messages_cpp"
-	@echo "... std_srvs_generate_messages_eus"
-	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... turtlesim_generate_messages_py"
-	@echo "... std_srvs_generate_messages_nodejs"
-	@echo "... test"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... turtlesim_generate_messages_py"
+	@echo "... turtlesim_generate_messages_nodejs"
+	@echo "... turtlesim_generate_messages_lisp"
+	@echo "... install/local"
+	@echo "... turtlesim_generate_messages_eus"
+	@echo "... turtle_listener"
+	@echo "... turtlesim_generate_messages_cpp"
 	@echo "... src/exercise5_triangle.o"
 	@echo "... src/exercise5_triangle.i"
 	@echo "... src/exercise5_triangle.s"

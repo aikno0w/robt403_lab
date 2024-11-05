@@ -474,6 +474,12 @@ control_snake_BINARY_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/build/control_sn
 //Value Computed by CMake
 control_snake_SOURCE_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/src/control_snake
 
+//Value Computed by CMake
+controller_BINARY_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/build/controller
+
+//Value Computed by CMake
+controller_SOURCE_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/src/controller
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
@@ -604,6 +610,24 @@ gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 //The directory containing a CMake configuration file for kdl_parser.
 kdl_parser_DIR:PATH=/opt/ros/noetic/share/kdl_parser/cmake
 
+//Value Computed by CMake
+lab4_BINARY_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/build/lab4
+
+//Value Computed by CMake
+lab4_SOURCE_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/src/lab4
+
+//Value Computed by CMake
+lab4_control_BINARY_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/build/lab4_control
+
+//Value Computed by CMake
+lab4_control_SOURCE_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/src/lab4_control
+
+//Value Computed by CMake
+lab4_moveit_BINARY_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/build/lab4_moveit
+
+//Value Computed by CMake
+lab4_moveit_SOURCE_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/src/lab4_moveit
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/noetic/lib/libmoveit_move_group_capabilities_base.so
 
@@ -623,13 +647,28 @@ move_BINARY_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/build/snake-noetic/move
 move_SOURCE_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/src/snake-noetic/move
 
 //Value Computed by CMake
+moveit_aidana_BINARY_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/build/moveit_aidana
+
+//Value Computed by CMake
+moveit_aidana_SOURCE_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/src/moveit_aidana
+
+//Value Computed by CMake
 moveit_arm_BINARY_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/build/snake-noetic/moveit_arm
 
 //Value Computed by CMake
 moveit_arm_SOURCE_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/src/snake-noetic/moveit_arm
 
+//The directory containing a CMake configuration file for moveit_commander.
+moveit_commander_DIR:PATH=/opt/ros/noetic/share/moveit_commander/cmake
+
 //The directory containing a CMake configuration file for moveit_core.
 moveit_core_DIR:PATH=/opt/ros/noetic/share/moveit_core/cmake
+
+//Value Computed by CMake
+moveit_dimash_BINARY_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/build/moveit_dimash
+
+//Value Computed by CMake
+moveit_dimash_SOURCE_DIR:STATIC=/home/aina_shilikbabe/catkin_ws/src/moveit_dimash
 
 //The directory containing a CMake configuration file for moveit_msgs.
 moveit_msgs_DIR:PATH=/opt/ros/noetic/share/moveit_msgs/cmake
@@ -1018,7 +1057,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=23
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -1,0 +1,8 @@
+prefix=/home/aina_shilikbabe/catkin_ws/install
+
+Name: moveit_aidana
+Description: Description of moveit_aidana
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

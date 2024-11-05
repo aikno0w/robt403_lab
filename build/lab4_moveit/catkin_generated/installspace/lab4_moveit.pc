@@ -1,0 +1,8 @@
+prefix=/home/aina_shilikbabe/catkin_ws/install
+
+Name: lab4_moveit
+Description: Description of lab4_moveit
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

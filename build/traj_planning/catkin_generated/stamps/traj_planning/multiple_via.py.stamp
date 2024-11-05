@@ -12,23 +12,22 @@ def initialize_publishers():
     rospy.init_node('robot_mover', anonymous=True)
     
     #Simulation
-    
-    #publishers = [		
-    	#rospy.Publisher('/robot/joint1_position_controller/command', Float64, queue_size=10),  # Joint 1
-    	#rospy.Publisher('/robot/joint2_position_controller/command', Float64, queue_size=10),  # Joint 2 (set to 0)
-    	#rospy.Publisher('/robot/joint3_position_controller/command', Float64, queue_size=10),  # Joint 3
-    	#rospy.Publisher('/robot/joint4_position_controller/command', Float64, queue_size=10),  # Joint 4 (set to 0)
-    	#rospy.Publisher('/robot/joint5_position_controller/command', Float64, queue_size=10)   # Joint 5
-    #]   
+    publishers = [
+    	rospy.Publisher('/robot/joint1_position_controller/command', Float64, queue_size=10),  # Joint 1
+    	rospy.Publisher('/robot/joint2_position_controller/command', Float64, queue_size=10),  # Joint 2 (set to 0)
+    	rospy.Publisher('/robot/joint3_position_controller/command', Float64, queue_size=10),  # Joint 3
+    	rospy.Publisher('/robot/joint4_position_controller/command', Float64, queue_size=10),  # Joint 4 (set to 0)
+    	rospy.Publisher('/robot/joint5_position_controller/command', Float64, queue_size=10)   # Joint 5
+    ]   
     #Real - robot
     
-    publishers = [
-    	rospy.Publisher('/motortom2m/command', Float64, queue_size=10),  # Joint 1
-    	rospy.Publisher('/joint2/command', Float64, queue_size=10),      # Joint 2 (set to 0)
-    	rospy.Publisher('/joint4/command', Float64, queue_size=10),      # Joint 3
-    	rospy.Publisher('/joint6/command', Float64, queue_size=10),      # Joint 4 (set to 0)
-    	rospy.Publisher('/end/command', Float64, queue_size=10)          # Joint 5
-    ]
+    #publishers = [
+    	#rospy.Publisher('/motortom2m/command', Float64, queue_size=10),  # Joint 1
+    	#rospy.Publisher('/joint2/command', Float64, queue_size=10),      # Joint 2 (set to 0)
+    	#rospy.Publisher('/joint4/command', Float64, queue_size=10),      # Joint 3
+    	#rospy.Publisher('/joint6/command', Float64, queue_size=10),      # Joint 4 (set to 0)
+    	#rospy.Publisher('/end/command', Float64, queue_size=10)          # Joint 5
+    #]
     
     return publishers
 
